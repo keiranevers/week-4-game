@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Crystal Game</title>
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+
+	<div class="container jumbotron">
+		<h1>Crystals Collector!!</h1>
+		<h2>Match the Random Number</h2>
+	</div>
+
+	<div class="container">
+		<h3>Game Objectives</h3>
+		<p>You will be given a random number at the start of the game.</p>
+		<p>There are four crystals below.  By clicking on a crystal, you will add a speific amount of points to your total score.</p>
+		<p>You win the game by matching your total score to the random number, you lose the game if your total score results in a higher number than the random number given.</p>
+		<p>The value of each crystal is hidden from you until you click on it.  The number assigned to the crystal will remain the same during the instance of the game.</p>
+		<p>Each time the game starts, the game will change the values of the Randon number, as well as the value of each crystal.</p>
+	</div>
+
+	<div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <img id="purple" src="assets/images/purple-gem.png" alt="purple">
+            </div>
+            <div class="col-sm-3">
+                <img id="green" src="assets/images/green-gem.png" alt="green">
+            </div>
+            <div class="col-sm-3">
+                <img id="pink" src="assets/images/pink-gem.png" alt="pink">
+            </div>
+            <div class="col-sm-3">
+                <img id="blue" src="assets/images/blue-gem.png" alt="blue">
+            </div>
+        </div>
+        <div class="row container">
+        	<div class="col-sm-6 btn btn-primary"><a>Random Number: </a>
+                <span id="randomNumber"></span>
+            </div>
+
+        	<div class="col-sm-6 btn btn-secondary"><a>Cumulative Value: </a>
+                <span id="cumulativeValue"></span>
+            </div>
+        </div>
+
+        <div class="row container">
+        	<div class="col-sm-6 btn btn-success"><a>Number of Games Won: </a>
+                <span id="winCount"></span>
+            </div>
+
+        	<div class="col-sm-6 btn btn-danger"><a>Number of Games Lost: </a>
+                <span id="lossCount"></span>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+</html>
+
+
+
+
+
