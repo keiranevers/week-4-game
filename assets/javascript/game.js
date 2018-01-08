@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+//set variables needed to play game
+
 var randomNumber;
 var cumulativeValue = 0;
 var purple;
@@ -9,14 +11,15 @@ var blue;
 var winCount = 0;
 var lossCount = 0;
 
+// initialize the value of each variable used to play the game (leave win/los count as global as it is captured for each game played)
 
 var initialize = function() {
     cumulativeValue = 0;
-    randomNumber = 18 + Math.floor(Math.random() * 120);
-    blue = 1 + Math.floor(Math.random() * 12);
-    pink = 1 + Math.floor(Math.random() * 12);
-    green = 1 + Math.floor(Math.random() * 12);
-    purple = 1 + Math.floor(Math.random() * 12);
+    randomNumber = Math.floor(Math.random() * ((120-19) +1) + 19);
+    blue = Math.floor(Math.random() * 12) + 1;
+    pink = Math.floor(Math.random() * 12) + 1;
+    green = Math.floor(Math.random() * 12) + 1;
+    purple = Math.floor(Math.random() * 12) + 1;
 
     $("#randomNumber").html(randomNumber);
     $("#cumulativeValue").html(cumulativeValue);
@@ -24,8 +27,12 @@ var initialize = function() {
     $("#lossCount").html(lossCount);
 }
 
+// call initialize function to play/start
+
 initialize();
 
+
+// check and count win/losses, initialize when complete
 var winCheck = function() {
 	if(cumulativeValue == randomNumber) {
 		winCount++;
@@ -40,6 +47,7 @@ var winCheck = function() {
 	}
 }
 
+// functions that will add each crystal's value and add to the user's value
 
 $("#purple").on("click", function() {
     cumulativeValue = cumulativeValue + purple;
